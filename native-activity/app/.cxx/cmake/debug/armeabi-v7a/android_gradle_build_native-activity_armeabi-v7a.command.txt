@@ -1,0 +1,7 @@
+Executable : /home/luc/App/Android/Sdk/cmake/3.10.2.4988404/bin/ninja
+arguments : 
+-C
+/home/luc/NativeARCore/native-activity/app/.cxx/cmake/debug/armeabi-v7a
+native-activity
+jvmArgs : 
+

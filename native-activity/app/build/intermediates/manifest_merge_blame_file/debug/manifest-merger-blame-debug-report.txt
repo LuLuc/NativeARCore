@@ -1,0 +1,150 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!-- BEGIN_INCLUDE(manifest) -->
+3<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+4    package="com.example.nativeAR"
+5    android:versionCode="1"
+6    android:versionName="1.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="14"
+9-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml
+10        android:targetSdkVersion="28" />
+10-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml
+11
+12    <uses-permission android:name="android.permission.CAMERA" />
+12-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:8:3-62
+12-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:8:20-60
+13
+14    <uses-feature
+14-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:9:3-84
+15        android:name="android.hardware.camera.ar"
+15-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:9:17-58
+16        android:required="true" />
+16-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:9:59-82
+17
+18    <queries>
+18-->[com.google.ar:core:1.20.0] /home/luc/.gradle/caches/transforms-2/files-2.1/769c512a44567d199c85061f86343ed7/jetified-core-1.20.0/AndroidManifest.xml:29:5-31:15
+19        <package android:name="com.google.ar.core" />
+19-->[com.google.ar:core:1.20.0] /home/luc/.gradle/caches/transforms-2/files-2.1/769c512a44567d199c85061f86343ed7/jetified-core-1.20.0/AndroidManifest.xml:30:9-54
+19-->[com.google.ar:core:1.20.0] /home/luc/.gradle/caches/transforms-2/files-2.1/769c512a44567d199c85061f86343ed7/jetified-core-1.20.0/AndroidManifest.xml:30:18-51
+20    </queries>
+21
+22    <application
+22-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:11:3-36:17
+23        android:allowBackup="false"
+23-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:12:7-34
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.2.0] /home/luc/.gradle/caches/transforms-2/files-2.1/ccb20ed30836142a5a66c164bb92a0ce/core-1.2.0/AndroidManifest.xml:24:18-86
+25        android:debuggable="true"
+26        android:fullBackupContent="false"
+26-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:13:7-40
+27        android:icon="@mipmap/ic_launcher"
+27-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:14:7-41
+28        android:label="@string/app_name"
+28-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:15:7-39
+29        android:testOnly="true" >
+30
+31        <!--
+32         Our activity is the built-in NativeActivity framework class.
+33         This will take care of integrating with our NDK code.
+34        -->
+35        <activity
+35-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:19:5-30:16
+36            android:name="com.example.nativeAR.MyActivity"
+36-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:19:15-61
+37            android:configChanges="orientation|keyboardHidden"
+37-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:21:15-65
+38            android:label="@string/app_name" >
+38-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:20:15-47
+39
+40            <!-- Tell NativeActivity the name of our .so -->
+41            <meta-data
+41-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:23:7-24:52
+42                android:name="android.app.lib_name"
+42-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:23:18-53
+43                android:value="native-activity" />
+43-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:24:18-49
+44
+45            <intent-filter>
+45-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:25:7-28:23
+46                <action android:name="android.intent.action.MAIN" />
+46-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:26:9-61
+46-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:26:17-58
+47
+48                <category android:name="android.intent.category.LAUNCHER" />
+48-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:27:9-69
+48-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:27:19-66
+49            </intent-filter>
+50        </activity>
+51
+52        <!--
+53     "AR Required" app, requires "Google Play Services for AR" (ARCore)
+54     to be installed, as the app does not include any non-AR features.
+55        -->
+56        <meta-data
+56-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:34:5-77
+57            android:name="com.google.ar.core"
+57-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:34:16-49
+58            android:value="optional" />
+58-->/home/luc/NativeARCore/native-activity/app/src/main/AndroidManifest.xml:34:50-74
+59
+60        <activity
+60-->[com.google.android.gms:play-services-auth:18.0.0] /home/luc/.gradle/caches/transforms-2/files-2.1/c7c8438a8f935091b540d290be46ece9/jetified-play-services-auth-18.0.0/AndroidManifest.xml:23:9-27:75
+61            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+61-->[com.google.android.gms:play-services-auth:18.0.0] /home/luc/.gradle/caches/transforms-2/files-2.1/c7c8438a8f935091b540d290be46ece9/jetified-play-services-auth-18.0.0/AndroidManifest.xml:24:13-93
+62            android:excludeFromRecents="true"
+62-->[com.google.android.gms:play-services-auth:18.0.0] /home/luc/.gradle/caches/transforms-2/files-2.1/c7c8438a8f935091b540d290be46ece9/jetified-play-services-auth-18.0.0/AndroidManifest.xml:25:13-46
+63            android:exported="false"
+63-->[com.google.android.gms:play-services-auth:18.0.0] /home/luc/.gradle/caches/transforms-2/files-2.1/c7c8438a8f935091b540d290be46ece9/jetified-play-services-auth-18.0.0/AndroidManifest.xml:26:13-37
+64            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+64-->[com.google.android.gms:play-services-auth:18.0.0] /home/luc/.gradle/caches/transforms-2/files-2.1/c7c8438a8f935091b540d290be46ece9/jetified-play-services-auth-18.0.0/AndroidManifest.xml:27:13-72
+65        <!--
+66            Service handling Google Sign-In user revocation. For apps that do not integrate with
+67            Google Sign-In, this service will never be started.
+68        -->
+69        <service
+69-->[com.google.android.gms:play-services-auth:18.0.0] /home/luc/.gradle/caches/transforms-2/files-2.1/c7c8438a8f935091b540d290be46ece9/jetified-play-services-auth-18.0.0/AndroidManifest.xml:33:9-36:110
+70            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+70-->[com.google.android.gms:play-services-auth:18.0.0] /home/luc/.gradle/caches/transforms-2/files-2.1/c7c8438a8f935091b540d290be46ece9/jetified-play-services-auth-18.0.0/AndroidManifest.xml:34:13-89
+71            android:exported="true"
+71-->[com.google.android.gms:play-services-auth:18.0.0] /home/luc/.gradle/caches/transforms-2/files-2.1/c7c8438a8f935091b540d290be46ece9/jetified-play-services-auth-18.0.0/AndroidManifest.xml:35:13-36
+72            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" /> <!-- The minimal version code of ARCore APK required for an app using this SDK. -->
+72-->[com.google.android.gms:play-services-auth:18.0.0] /home/luc/.gradle/caches/transforms-2/files-2.1/c7c8438a8f935091b540d290be46ece9/jetified-play-services-auth-18.0.0/AndroidManifest.xml:36:13-107
+73        <meta-data
+73-->[com.google.ar:core:1.20.0] /home/luc/.gradle/caches/transforms-2/files-2.1/769c512a44567d199c85061f86343ed7/jetified-core-1.20.0/AndroidManifest.xml:36:9-38:41
+74            android:name="com.google.ar.core.min_apk_version"
+74-->[com.google.ar:core:1.20.0] /home/luc/.gradle/caches/transforms-2/files-2.1/769c512a44567d199c85061f86343ed7/jetified-core-1.20.0/AndroidManifest.xml:37:13-62
+75            android:value="202470000" /> <!-- This activity is critical for installing ARCore when it is not already present. -->
+75-->[com.google.ar:core:1.20.0] /home/luc/.gradle/caches/transforms-2/files-2.1/769c512a44567d199c85061f86343ed7/jetified-core-1.20.0/AndroidManifest.xml:38:13-38
+76        <activity
+76-->[com.google.ar:core:1.20.0] /home/luc/.gradle/caches/transforms-2/files-2.1/769c512a44567d199c85061f86343ed7/jetified-core-1.20.0/AndroidManifest.xml:40:9-46:80
+77            android:name="com.google.ar.core.InstallActivity"
+77-->[com.google.ar:core:1.20.0] /home/luc/.gradle/caches/transforms-2/files-2.1/769c512a44567d199c85061f86343ed7/jetified-core-1.20.0/AndroidManifest.xml:41:13-62
+78            android:configChanges="keyboardHidden|orientation|screenSize"
+78-->[com.google.ar:core:1.20.0] /home/luc/.gradle/caches/transforms-2/files-2.1/769c512a44567d199c85061f86343ed7/jetified-core-1.20.0/AndroidManifest.xml:42:13-74
+79            android:excludeFromRecents="true"
+79-->[com.google.ar:core:1.20.0] /home/luc/.gradle/caches/transforms-2/files-2.1/769c512a44567d199c85061f86343ed7/jetified-core-1.20.0/AndroidManifest.xml:43:13-46
+80            android:exported="false"
+80-->[com.google.ar:core:1.20.0] /home/luc/.gradle/caches/transforms-2/files-2.1/769c512a44567d199c85061f86343ed7/jetified-core-1.20.0/AndroidManifest.xml:44:13-37
+81            android:launchMode="singleTop"
+81-->[com.google.ar:core:1.20.0] /home/luc/.gradle/caches/transforms-2/files-2.1/769c512a44567d199c85061f86343ed7/jetified-core-1.20.0/AndroidManifest.xml:45:13-43
+82            android:theme="@android:style/Theme.Material.Light.Dialog.Alert" />
+82-->[com.google.ar:core:1.20.0] /home/luc/.gradle/caches/transforms-2/files-2.1/769c512a44567d199c85061f86343ed7/jetified-core-1.20.0/AndroidManifest.xml:46:13-77
+83        <activity
+83-->[com.google.android.gms:play-services-base:17.5.0] /home/luc/.gradle/caches/transforms-2/files-2.1/9459bfce5db931d80b720270d6eb5adc/jetified-play-services-base-17.5.0/AndroidManifest.xml:23:9-26:75
+84            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+84-->[com.google.android.gms:play-services-base:17.5.0] /home/luc/.gradle/caches/transforms-2/files-2.1/9459bfce5db931d80b720270d6eb5adc/jetified-play-services-base-17.5.0/AndroidManifest.xml:24:13-79
+85            android:exported="false"
+85-->[com.google.android.gms:play-services-base:17.5.0] /home/luc/.gradle/caches/transforms-2/files-2.1/9459bfce5db931d80b720270d6eb5adc/jetified-play-services-base-17.5.0/AndroidManifest.xml:25:13-37
+86            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+86-->[com.google.android.gms:play-services-base:17.5.0] /home/luc/.gradle/caches/transforms-2/files-2.1/9459bfce5db931d80b720270d6eb5adc/jetified-play-services-base-17.5.0/AndroidManifest.xml:26:13-72
+87
+88        <meta-data
+88-->[com.google.android.gms:play-services-basement:17.5.0] /home/luc/.gradle/caches/transforms-2/files-2.1/cc8a132882228edf49708b9a174eb07c/jetified-play-services-basement-17.5.0/AndroidManifest.xml:23:9-25:69
+89            android:name="com.google.android.gms.version"
+89-->[com.google.android.gms:play-services-basement:17.5.0] /home/luc/.gradle/caches/transforms-2/files-2.1/cc8a132882228edf49708b9a174eb07c/jetified-play-services-basement-17.5.0/AndroidManifest.xml:24:13-58
+90            android:value="@integer/google_play_services_version" />
+90-->[com.google.android.gms:play-services-basement:17.5.0] /home/luc/.gradle/caches/transforms-2/files-2.1/cc8a132882228edf49708b9a174eb07c/jetified-play-services-basement-17.5.0/AndroidManifest.xml:25:13-66
+91    </application>
+92
+93</manifest> <!-- END_INCLUDE(manifest) -->

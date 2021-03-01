@@ -1,0 +1,4 @@
+#Mon Mar 01 12:33:28 CET 2021
+base.0=/home/luc/NativeARCore/native-activity/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

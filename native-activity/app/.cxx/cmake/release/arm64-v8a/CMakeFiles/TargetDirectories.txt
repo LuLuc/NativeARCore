@@ -1,0 +1,4 @@
+/home/luc/NativeARCore/native-activity/app/.cxx/cmake/release/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/home/luc/NativeARCore/native-activity/app/.cxx/cmake/release/arm64-v8a/CMakeFiles/edit_cache.dir
+/home/luc/NativeARCore/native-activity/app/.cxx/cmake/release/arm64-v8a/CMakeFiles/native-activity.dir
+/home/luc/NativeARCore/native-activity/app/.cxx/cmake/release/arm64-v8a/CMakeFiles/native_app_glue.dir

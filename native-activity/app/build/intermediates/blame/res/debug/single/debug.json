@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/luc/NativeARCore/native-activity/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/home/luc/NativeARCore/native-activity/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/luc/NativeARCore/native-activity/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/home/luc/NativeARCore/native-activity/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/luc/NativeARCore/native-activity/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/home/luc/NativeARCore/native-activity/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/luc/NativeARCore/native-activity/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/luc/NativeARCore/native-activity/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    }
+]

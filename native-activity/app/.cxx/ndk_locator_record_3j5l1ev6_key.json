@@ -1,0 +1,12 @@
+{
+  "ndkVersionFromDsl": "21.2.6472646",
+  "sdkFolder": "/home/luc/App/Android/Sdk",
+  "sideBySideNdkFolderNames": [
+    "21.4.7075529",
+    "21.3.6528147",
+    "20.0.5594570",
+    "21.1.6352462",
+    "22.0.7026061",
+    "21.2.6472646"
+  ]
+}
