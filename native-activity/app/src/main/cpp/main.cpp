@@ -261,13 +261,6 @@ static void engine_handle_cmd(struct android_app* app, int32_t cmd) {
             if (engine->app->window != nullptr) {
                 engine_init_display(engine);
                 engine_draw_frame(engine);
-                for(int i = 0; i < 5 && (!engine->hasCameraGranted); i++)  { usleep(100000); };
-
-                if (engine->hasCameraGranted)
-                {
-                    engine->arcore = new ARCore(engine_g.app->activity);
-                    engine->hasARCore = engine_g.arcore->init();
-                }
             }
             break;
         case APP_CMD_TERM_WINDOW:
@@ -363,9 +356,17 @@ void android_main(struct android_app* state) {
     }
 
     // loop waiting for stuff to do.
+    bool ARCoreStarted = false;
 
     while (true) {
         // Read all pending events.
+
+        if (engine_g.hasCameraGranted && ARCoreStarted  == false)
+        {
+            ARCoreStarted = true;
+            engine_g.arcore = new ARCore(engine_g.app->activity);
+            engine_g.hasARCore = engine_g.arcore->init();
+        }
 
         int ident;
         int events;
